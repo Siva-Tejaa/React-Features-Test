@@ -52,18 +52,6 @@ const Crud = () => {
     dispatch(deletetodo(todoToDelete));
   };
 
-  // useEffect(() => {
-  //   let localTodos = JSON.parse(localStorage.getItem("todos"));
-
-  //   if (localTodos?.length > 0) {
-  //     dispatch(loadFromLocalStorage(localTodos));
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem("todos", JSON.stringify(alltodos));
-  // }, [alltodos]);
-
   return (
     <div>
       <h3>CRUD Operations</h3>
