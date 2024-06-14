@@ -5,6 +5,8 @@ import counterSlice from "./features/counterSlice";
 import themeSlice from "./features/themeSlice";
 import crudSlice, { loadFromLocalStorage } from "./features/crudSlice";
 
+import networkSlice from "./features/networkSlice";
+
 //ActionSlices
 import cartSlice, { cartItemsLoadFromLocalStorage } from "./features/cartSlice";
 
@@ -24,6 +26,7 @@ const store = configureStore({
     cart: cartSlice,
     productDetails: productDetailsSlice,
     wishList: wishListSlice,
+    network: networkSlice,
   },
 });
 

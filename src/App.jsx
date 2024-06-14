@@ -20,6 +20,7 @@ const CartPage = lazy(() => import("./components/ecommerce/CartPage"));
 
 //Routing
 import { Routes, Route } from "react-router-dom";
+import NetworkStatusWrapper from "./components/NetworkStatusWrapper";
 
 const App = () => {
   return (
@@ -37,22 +38,24 @@ const App = () => {
           </div>
         }
       >
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/usestate" element={<HookUseState />} />
-          <Route exact path="/useeffect" element={<HookUseEffect />} />
-          <Route exact path="/usecontext" element={<HookuseContext />} />
-          <Route exact path="/useref" element={<HookuseRef />} />
-          <Route exact path="/optimization" element={<Optimization />} />
-          <Route exact path="/crud" element={<Crud />} />
-          <Route exact path="/allproducts" element={<ProductsPage />} />
-          <Route
-            exact
-            path="/product/:productId"
-            element={<ProductDetailsPage />}
-          />
-          <Route exact path="/cart" element={<CartPage />} />
-        </Routes>
+        <NetworkStatusWrapper>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/usestate" element={<HookUseState />} />
+            <Route exact path="/useeffect" element={<HookUseEffect />} />
+            <Route exact path="/usecontext" element={<HookuseContext />} />
+            <Route exact path="/useref" element={<HookuseRef />} />
+            <Route exact path="/optimization" element={<Optimization />} />
+            <Route exact path="/crud" element={<Crud />} />
+            <Route exact path="/allproducts" element={<ProductsPage />} />
+            <Route
+              exact
+              path="/product/:productId"
+              element={<ProductDetailsPage />}
+            />
+            <Route exact path="/cart" element={<CartPage />} />
+          </Routes>
+        </NetworkStatusWrapper>
       </Suspense>
     </React.Fragment>
   );
